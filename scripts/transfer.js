@@ -5,11 +5,11 @@ async function main() {
 
   const myToken = await hre.ethers.getContractFactory("MyFirstToken");
 
-  const contractAddress = 'CONTRACT ADRESS HERE';
+  const contractAddress = 'CONTRACT ADRESS';
 
   const MyToken = await myToken.attach(contractAddress);
 
-  await MyToken.transfer('WALLET PUBLIC KEYS HERE', parseUnits("NUMBER OF TOKENS IN STRING HERE", 18)); 
+  await MyToken.transfer('WALLET ADRESS', parseUnits("1", 18)); //SENDING 1 TOKEN TO THIS WALLET ADRESS
 }
 
 
